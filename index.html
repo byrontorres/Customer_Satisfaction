@@ -3,66 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exploratory Data Analysis (EDA) - Customer Satisfaction Project</title>
+    <title>Customer Satisfaction Project</title>
 </head>
 <body>
-    <h1>Exploratory Data Analysis (EDA)</h1>
+    <h1>Análisis de la Satisfacción del Cliente en una Compañía Aérea</h1>
 
-    <p>Welcome to the Exploratory Data Analysis section of the Customer Satisfaction Project. This section includes visualizations and summaries to understand the dataset better.</p>
+    <h2>Introducción</h2>
+    <p>En el competitivo mundo de la aviación, la satisfacción del cliente es un diferenciador crítico que puede determinar la lealtad del cliente y la reputación de una aerolínea. Este proyecto se centra en analizar los datos de una encuesta de satisfacción de pasajeros con el objetivo de identificar los factores que influyen más significativamente en la satisfacción o insatisfacción de los clientes. Entender estos factores permitirá a la aerolínea tomar decisiones estratégicas informadas para mejorar la experiencia del cliente y, en última instancia, aumentar la retención y la fidelidad del cliente.</p>
 
-    <h2>Resumen Estadístico</h2>
+    <h2>Objetivo</h2>
+    <p>El objetivo principal de este ejercicio es identificar los factores determinantes que influyen en la satisfacción de los clientes de la aerolínea. A través de un análisis exhaustivo de los datos, se pretende descubrir insights clave que puedan ser utilizados para mejorar los servicios ofrecidos, enfocándose en los grupos de clientes que presentan mayores oportunidades de mejora. Este análisis servirá de base para formular estrategias que optimicen la experiencia del cliente y potencien la competitividad de la aerolínea.</p>
+
+    <h2>Estructura del Proyecto</h2>
+    <p>El desarrollo del proyecto se realiza siguiendo la estructura detallada a continuación:</p>
+    <ul>
+        <li><a href="ETL.html">Extracción, Transformación y Carga (ETL)</a>: Procesamiento de los datos brutos para su posterior análisis, incluyendo la limpieza, normalización y manejo de valores nulos.</li>
+        <li><a href="EDA.html">Análisis Exploratorio de Datos (EDA)</a>: Exploración detallada de los datos mediante visualizaciones y estadísticas descriptivas para identificar patrones, tendencias y posibles anomalías. Identificación de outliers y análisis de correlación entre variables.</li>
+        <li><a href="correlacion_and_MachineL.html">Modelización</a>: Evaluación de al menos tres modelos de Machine Learning para predecir la satisfacción del cliente. Comparación de los modelos en función de su precisión y capacidad de generalización. Selección del modelo más adecuado para la predicción.</li>
+        <li>Resultados y Conclusiones: Presentación de los resultados obtenidos, destacando los insights más significativos. Propuestas estratégicas basadas en los hallazgos del análisis, orientadas a mejorar la satisfacción del cliente.</li>
+        <li>Presentación Ejecutiva: Preparación de una presentación ejecutiva que resuma la problemática, los hallazgos más relevantes y las recomendaciones estratégicas para la toma de decisiones.</li>
+    </ul>
+
+    <h2>Exploratory Data Analysis (EDA)</h2>
+
+    <h3>Resumen Estadístico</h3>
     <p>La tabla a continuación presenta un resumen estadístico de las variables numéricas en el conjunto de datos. Incluye medidas como el promedio, desviación estándar, y valores percentiles, lo que permite tener una visión general del comportamiento de cada variable.</p>
-    <img src="C:\Users\pc-admin\Documents\Proyectos Data\Customer_Satisfaction\images\Captura de pantalla 2024-08-16 114006.png" alt="Resumen Estadístico">
+    <img src="https://github.com/byrontorres/Customer_Satisfaction/blob/gh-pages/images/Captura%20de%20pantalla%202024-08-16%20114006.png" alt="Resumen Estadístico">
 
-    <h2>Distribución de la Variable Objetivo (Satisfacción)</h2>
+    <h3>Distribución de la Variable Objetivo (Satisfacción)</h3>
     <p>En la siguiente gráfica se puede observar la distribución de la variable objetivo <strong>Satisfaction</strong>, mostrando la cantidad de clientes que están satisfechos versus los que no lo están (neutral or dissatisfied). La mayoría de los clientes se encuentran en la categoría de <strong>neutral or dissatisfied</strong>.</p>
-    <img src="C:\Users\pc-admin\Documents\Proyectos Data\Customer_Satisfaction\images\Captura de pantalla 2024-08-16 114006.png" alt="Distribución de la Variable Objetivo">
+    <img src="https://github.com/byrontorres/Customer_Satisfaction/blob/gh-pages/images/Captura%20de%20pantalla%202024-08-16%20114213.png" alt="Distribución de la Variable Objetivo">
 
-    <h2>Detección de Outliers</h2>
-    <h3>Distancia de Vuelo (<em>flight_distance</em>)</h3>
+    <h3>Detección de Outliers</h3>
+    <h4>Distancia de Vuelo (<em>flight_distance</em>)</h4>
     <p>El boxplot muestra la presencia de varios outliers en la distancia de vuelo, lo que indica vuelos significativamente más largos que la mayoría.</p>
-    <img src="C:\Users\pc-admin\Documents\Proyectos Data\Customer_Satisfaction\images\Captura de pantalla 2024-08-16 114006.png" alt="Boxplot de flight_distance">
+    <img src="https://github.com/byrontorres/Customer_Satisfaction/blob/gh-pages/images/Captura%20de%20pantalla%202024-08-16%20114243.png" alt="Boxplot de flight_distance">
 
-    <h3>Retraso en la Llegada (<em>arrival_delay_in_minutes</em>)</h3>
+    <h4>Retraso en la Llegada (<em>arrival_delay_in_minutes</em>)</h4>
     <p>Este boxplot también revela un número considerable de outliers, sugiriendo que algunos vuelos experimentaron retrasos extremos.</p>
-    <img src="C:\Users\pc-admin\Documents\Proyectos Data\Customer_Satisfaction\images\Captura de pantalla 2024-08-16 114006.png" alt="Boxplot de arrival_delay_in_minutes">
+    <img src="https://github.com/byrontorres/Customer_Satisfaction/blob/gh-pages/images/Captura%20de%20pantalla%202024-08-16%20114253.png" alt="Boxplot de arrival_delay_in_minutes">
 
-    <h2>Relación entre Edad y Satisfacción</h2>
+    <h3>Relación entre Edad y Satisfacción</h3>
     <p>La gráfica muestra la distribución de la edad según la satisfacción de los clientes. Se observa que los clientes satisfechos tienden a ser ligeramente mayores que aquellos que están insatisfechos.</p>
-    <img src="C:\Users\pc-admin\Documents\Proyectos Data\Customer_Satisfaction\images\Captura de pantalla 2024-08-16 114006.png" alt="Relación entre Edad y Satisfacción">
+    <img src="https://github.com/byrontorres/Customer_Satisfaction/blob/gh-pages/images/Captura%20de%20pantalla%202024-08-16%20114311.png" alt="Relación entre Edad y Satisfacción">
 
-    <h2>Distribución de la Distancia de Vuelo por Satisfacción</h2>
+    <h3>Distribución de la Distancia de Vuelo por Satisfacción</h3>
     <p>Esta gráfica compara la distribución de la distancia de vuelo entre clientes satisfechos e insatisfechos. Podemos ver que los vuelos más largos tienden a estar asociados con niveles más bajos de satisfacción.</p>
-    <img src="C:\Users\pc-admin\Documents\Proyectos Data\Customer_Satisfaction\images\Captura de pantalla 2024-08-16 114006.png" alt="Distribución de la Distancia de Vuelo">
+    <img src="https://github.com/byrontorres/Customer_Satisfaction/blob/gh-pages/images/Captura%20de%20pantalla%202024-08-16%20114321.png" alt="Distribución de la Distancia de Vuelo">
 
-    <h2>Satisfacción por Tipo de Viaje y Clase de Cliente</h2>
+    <h3>Satisfacción por Tipo de Viaje y Clase de Cliente</h3>
     <p>Aquí se visualiza la satisfacción de los clientes según su tipo de viaje (negocios o personal) y la clase en la que viajaron (Economy, Business, Eco Plus). Se observa una mayor satisfacción en viajeros de negocios, especialmente en clase Business.</p>
-    <img src="C:\Users\pc-admin\Documents\Proyectos Data\Customer_Satisfaction\images\Captura de pantalla 2024-08-16 114006.png" alt="Satisfacción por Tipo de Viaje">
+    <img src="https://github.com/byrontorres/Customer_Satisfaction/blob/gh-pages/images/Captura%20de%20pantalla%202024-08-16%20114332.png" alt="Satisfacción por Tipo de Viaje">
 
-    <h2>Distribución de la Satisfacción por Clase y Tipo de Viaje</h2>
+    <h3>Distribución de la Satisfacción por Clase y Tipo de Viaje</h3>
     <p>Este gráfico refina aún más el análisis anterior, mostrando que la mayoría de los clientes insatisfechos viajan en clase Economy, mientras que aquellos en clase Business muestran una mayor satisfacción.</p>
-    <img src="C:\Users\pc-admin\Documents\Proyectos Data\Customer_Satisfaction\images\Captura de pantalla 2024-08-16 114006.png" alt="Distribución de la Satisfacción por Clase">
+    <img src="https://github.com/byrontorres/Customer_Satisfaction/blob/gh-pages/images/Captura%20de%20pantalla%202024-08-16%20114342.png" alt="Distribución de la Satisfacción por Clase">
 
-    <h2>Puntuación de Servicios por Clase y Satisfacción</h2>
-    <h3>Comida y Bebida (<em>food_and_drink</em>)</h3>
+    <h3>Puntuación de Servicios por Clase y Satisfacción</h3>
+    <h4>Comida y Bebida (<em>food_and_drink</em>)</h4>
     <p>La satisfacción con la comida y bebida varía según la clase y la satisfacción general del cliente. Los clientes en clase Business generalmente califican más alto en esta categoría.</p>
-    <img src="C:\Users\pc-admin\Documents\Proyectos Data\Customer_Satisfaction\images\Captura de pantalla 2024-08-16 114006.png" alt="Puntuación de food_and_drink">
+    <img src="https://github.com/byrontorres/Customer_Satisfaction/blob/gh-pages/images/Captura%20de%20pantalla%202024-08-16%20114408.png" alt="Puntuación de food_and_drink">
 
-    <h3>Entretenimiento a Bordo (<em>inflight_entertainment</em>)</h3>
+    <h4>Entretenimiento a Bordo (<em>inflight_entertainment</em>)</h4>
     <p>Similar al gráfico anterior, los clientes en clase Business muestran mayores niveles de satisfacción con el entretenimiento a bordo.</p>
-    <img src="C:\Users\pc-admin\Documents\Proyectos Data\Customer_Satisfaction\images\Captura de pantalla 2024-08-16 114006.png" alt="Puntuación de inflight_entertainment">
+    <img src="https://github.com/byrontorres/Customer_Satisfaction/blob/gh-pages/images/Captura%20de%20pantalla%202024-08-16%20114408.png" alt="Puntuación de inflight_entertainment">
 
-    <h3>Embarque en Línea (<em>online_boarding</em>)</h3>
+    <h4>Embarque en Línea (<em>online_boarding</em>)</h4>
     <p>El embarque en línea es mejor valorado por los clientes satisfechos, especialmente en clase Business.</p>
-    <img src="C:\Users\pc-admin\Documents\Proyectos Data\Customer_Satisfaction\images\Captura de pantalla 2024-08-16 114006.png" alt="Puntuación de online_boarding">
+    <img src="https://github.com/byrontorres/Customer_Satisfaction/blob/gh-pages/images/Captura%20de%20pantalla%202024-08-16%20114418.png" alt="Puntuación de online_boarding">
 
-    <h3>Servicio WiFi en Vuelo (<em>inflight_wifi_service</em>)</h3>
+    <h4>Servicio WiFi en Vuelo (<em>inflight_wifi_service</em>)</h4>
     <p>La calidad del servicio de WiFi en vuelo es otra área donde se observan diferencias significativas en satisfacción, con Business y Eco Plus mostrando mejor puntuación entre clientes satisfechos.</p>
-    <img src="C:\Users\pc-admin\Documents\Proyectos Data\Customer_Satisfaction\images\Captura de pantalla 2024-08-16 114006.png" alt="Puntuación de inflight_wifi_service">
+    <img src="https://github.com/byrontorres/Customer_Satisfaction/blob/gh-pages/images/Captura%20de%20pantalla%202024-08-16%20114418.png" alt="Puntuación de inflight_wifi_service">
 
     <h2>Secciones del Proyecto</h2>
     <ul>
         <li><a href="index.html">Home</a></li>
+        <li><a href="EDA.html">Exploratory Data Analysis (EDA)</a></li>
         <li><a href="ETL.html">ETL Process</a></li>
         <li><a href="correlacion_and_MachineL.html">Correlation and Machine Learning</a></li>
     </ul>
