@@ -3,13 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer Satisfaction Project</title>
+    <title>Exploratory Data Analysis (EDA) - Customer Satisfaction Project</title>
 </head>
 <body>
-    <h1>Customer Satisfaction Project</h1>
-    <p>Welcome to the analysis of airline customer satisfaction. This project is divided into the following sections:</p>
+    <h1>Exploratory Data Analysis (EDA)</h1>
+
+    <p>Welcome to the Exploratory Data Analysis section of the Customer Satisfaction Project. This section includes visualizations and summaries to understand the dataset better.</p>
+
+    <h2>Resumen Estadístico</h2>
+    <p>La tabla a continuación presenta un resumen estadístico de las variables numéricas en el conjunto de datos. Incluye medidas como el promedio, desviación estándar, y valores percentiles, lo que permite tener una visión general del comportamiento de cada variable.</p>
+    <img src="C:\Users\pc-admin\Documents\Proyectos Data\Customer_Satisfaction\images\Captura de pantalla 2024-08-16 114006.png" alt="Resumen Estadístico">
+
+    <h2>Distribución de la Variable Objetivo (Satisfacción)</h2>
+    <p>En la siguiente gráfica se puede observar la distribución de la variable objetivo <strong>Satisfaction</strong>, mostrando la cantidad de clientes que están satisfechos versus los que no lo están (neutral or dissatisfied). La mayoría de los clientes se encuentran en la categoría de <strong>neutral or dissatisfied</strong>.</p>
+    <img src="C:\Users\pc-admin\Documents\Proyectos Data\Customer_Satisfaction\images\Captura de pantalla 2024-08-16 114006.png" alt="Distribución de la Variable Objetivo">
+
+    <h2>Detección de Outliers</h2>
+    <h3>Distancia de Vuelo (<em>flight_distance</em>)</h3>
+    <p>El boxplot muestra la presencia de varios outliers en la distancia de vuelo, lo que indica vuelos significativamente más largos que la mayoría.</p>
+    <img src="C:\Users\pc-admin\Documents\Proyectos Data\Customer_Satisfaction\images\Captura de pantalla 2024-08-16 114006.png" alt="Boxplot de flight_distance">
+
+    <h3>Retraso en la Llegada (<em>arrival_delay_in_minutes</em>)</h3>
+    <p>Este boxplot también revela un número considerable de outliers, sugiriendo que algunos vuelos experimentaron retrasos extremos.</p>
+    <img src="C:\Users\pc-admin\Documents\Proyectos Data\Customer_Satisfaction\images\Captura de pantalla 2024-08-16 114006.png" alt="Boxplot de arrival_delay_in_minutes">
+
+    <h2>Relación entre Edad y Satisfacción</h2>
+    <p>La gráfica muestra la distribución de la edad según la satisfacción de los clientes. Se observa que los clientes satisfechos tienden a ser ligeramente mayores que aquellos que están insatisfechos.</p>
+    <img src="C:\Users\pc-admin\Documents\Proyectos Data\Customer_Satisfaction\images\Captura de pantalla 2024-08-16 114006.png" alt="Relación entre Edad y Satisfacción">
+
+    <h2>Distribución de la Distancia de Vuelo por Satisfacción</h2>
+    <p>Esta gráfica compara la distribución de la distancia de vuelo entre clientes satisfechos e insatisfechos. Podemos ver que los vuelos más largos tienden a estar asociados con niveles más bajos de satisfacción.</p>
+    <img src="C:\Users\pc-admin\Documents\Proyectos Data\Customer_Satisfaction\images\Captura de pantalla 2024-08-16 114006.png" alt="Distribución de la Distancia de Vuelo">
+
+    <h2>Satisfacción por Tipo de Viaje y Clase de Cliente</h2>
+    <p>Aquí se visualiza la satisfacción de los clientes según su tipo de viaje (negocios o personal) y la clase en la que viajaron (Economy, Business, Eco Plus). Se observa una mayor satisfacción en viajeros de negocios, especialmente en clase Business.</p>
+    <img src="C:\Users\pc-admin\Documents\Proyectos Data\Customer_Satisfaction\images\Captura de pantalla 2024-08-16 114006.png" alt="Satisfacción por Tipo de Viaje">
+
+    <h2>Distribución de la Satisfacción por Clase y Tipo de Viaje</h2>
+    <p>Este gráfico refina aún más el análisis anterior, mostrando que la mayoría de los clientes insatisfechos viajan en clase Economy, mientras que aquellos en clase Business muestran una mayor satisfacción.</p>
+    <img src="C:\Users\pc-admin\Documents\Proyectos Data\Customer_Satisfaction\images\Captura de pantalla 2024-08-16 114006.png" alt="Distribución de la Satisfacción por Clase">
+
+    <h2>Puntuación de Servicios por Clase y Satisfacción</h2>
+    <h3>Comida y Bebida (<em>food_and_drink</em>)</h3>
+    <p>La satisfacción con la comida y bebida varía según la clase y la satisfacción general del cliente. Los clientes en clase Business generalmente califican más alto en esta categoría.</p>
+    <img src="C:\Users\pc-admin\Documents\Proyectos Data\Customer_Satisfaction\images\Captura de pantalla 2024-08-16 114006.png" alt="Puntuación de food_and_drink">
+
+    <h3>Entretenimiento a Bordo (<em>inflight_entertainment</em>)</h3>
+    <p>Similar al gráfico anterior, los clientes en clase Business muestran mayores niveles de satisfacción con el entretenimiento a bordo.</p>
+    <img src="C:\Users\pc-admin\Documents\Proyectos Data\Customer_Satisfaction\images\Captura de pantalla 2024-08-16 114006.png" alt="Puntuación de inflight_entertainment">
+
+    <h3>Embarque en Línea (<em>online_boarding</em>)</h3>
+    <p>El embarque en línea es mejor valorado por los clientes satisfechos, especialmente en clase Business.</p>
+    <img src="C:\Users\pc-admin\Documents\Proyectos Data\Customer_Satisfaction\images\Captura de pantalla 2024-08-16 114006.png" alt="Puntuación de online_boarding">
+
+    <h3>Servicio WiFi en Vuelo (<em>inflight_wifi_service</em>)</h3>
+    <p>La calidad del servicio de WiFi en vuelo es otra área donde se observan diferencias significativas en satisfacción, con Business y Eco Plus mostrando mejor puntuación entre clientes satisfechos.</p>
+    <img src="C:\Users\pc-admin\Documents\Proyectos Data\Customer_Satisfaction\images\Captura de pantalla 2024-08-16 114006.png" alt="Puntuación de inflight_wifi_service">
+
+    <h2>Secciones del Proyecto</h2>
     <ul>
-        <li><a href="EDA.html">Exploratory Data Analysis (EDA)</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="ETL.html">ETL Process</a></li>
         <li><a href="correlacion_and_MachineL.html">Correlation and Machine Learning</a></li>
     </ul>
